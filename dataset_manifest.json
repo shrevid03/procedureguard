@@ -1,0 +1,28 @@
+{
+  "dataset": "openmarciea/openmarciea-again",
+  "downloaded_sop_files": [
+    "data/sop_documents/Mask_ID0_Unique_00061e4c-4b6c-4c6f-84b5-180f57ac00d2_Time_1726751807737.png",
+    "data/sop_documents/Mask_ID0_Unique_001221ce-df67-4c8d-8557-806b2a428462_Time_1726751777803.png",
+    "data/sop_documents/Mask_ID0_Unique_00122b3c-4e80-4019-a2c9-9268d2e0514e_Time_1726751802103.png",
+    "data/sop_documents/Mask_ID0_Unique_001281e3-174d-497b-ab5b-a10c744f69db_Time_1726751700303.png",
+    "data/sop_documents/Mask_ID0_Unique_0023015f-e21f-4555-a11b-8d0b908e3454_Time_1726751795303.png",
+    "data/sop_documents/Mask_ID0_Unique_002348d4-e59d-40df-ba69-9154a0c58367_Time_1726751780703.png",
+    "data/sop_documents/Mask_ID0_Unique_003a7ccb-71cc-4627-af91-6e8a396d85ed_Time_1726751750036.png",
+    "data/sop_documents/Mask_ID0_Unique_003c1ae7-7c5a-41cc-bc03-7efedabc69d7_Time_1726751743470.png",
+    "data/sop_documents/Mask_ID0_Unique_0043cabe-0486-46bd-b786-e4f2f80938b8_Time_1726751791637.png",
+    "data/sop_documents/Mask_ID0_Unique_007402bd-5905-4c97-8e10-ca96479387cc_Time_1726751735136.png",
+    "data/sop_documents/Mask_ID0_Unique_0078a3fd-638c-4661-96a2-45d177236b7e_Time_1726751704169.png",
+    "data/sop_documents/Mask_ID0_Unique_007b7452-cf29-43b8-b428-29c22e25a62a_Time_1726751743636.png",
+    "data/sop_documents/Mask_ID0_Unique_007d642d-2038-4311-b4f8-eedcc820cb1c_Time_1726751733503.png"
+  ],
+  "video_files_skipped": [
+    "Vol10/ExoData/ExoVideoVol10/ExoVideoVol10/PositionDoor/._BikeExoDoorVol10_RGB_anonymized.mp4",
+    "Vol10/ExoData/ExoVideoVol10/ExoVideoVol10/PositionDoor/BikeExoDoorVol10_RGB_anonymized.mp4",
+    "Vol10/ExoData/ExoVideoVol10/ExoVideoVol10/PositionDoor/BikeExoDoorVol10_StereoDepth.mp4",
+    "Vol10/ExoData/ExoVideoVol10/ExoVideoVol10/PositionWindow/._BikeExoWindowVol10_RGB_anonymized.mp4",
+    "Vol10/ExoData/ExoVideoVol10/ExoVideoVol10/PositionWindow/._BikeExoWindowVol10_StereoDepth.mp4",
+    "Vol10/ExoData/ExoVideoVol10/ExoVideoVol10/PositionWindow/BikeExoWindowVol10_RGB_anonymized.mp4",
+    "Vol10/ExoData/ExoVideoVol10/ExoVideoVol10/PositionWindow/BikeExoWindowVol10_StereoDepth.mp4"
+  ],
+  "video_bytes_skipped": 0
+}

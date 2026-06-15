@@ -1,0 +1,95 @@
+{
+  "name": "procedureguard-sop-skillset",
+  "description": "Layer 2 SOP pipeline: extract text + diagrams, verbalize diagrams with GPT-4o, embed everything for vector search.",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Util.DocumentIntelligenceLayoutSkill",
+      "name": "doc-layout",
+      "description": "Extract page text and inline images (diagrams, tables, safety symbols) with location metadata.",
+      "context": "/document",
+      "outputMode": "oneToMany",
+      "inputs": [
+        { "name": "file_data", "source": "/document/file_data" }
+      ],
+      "outputs": [
+        { "name": "text_sections", "targetName": "text_sections" },
+        { "name": "normalized_images", "targetName": "normalized_images" }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Custom.ChatCompletionSkill",
+      "name": "verbalize-diagrams",
+      "description": "VERIFY skill type against your API version. GPT-4o writes a plain-text description of each extracted diagram so it becomes searchable. If your API rejects this type, generate the skillset via the portal Multimodal RAG wizard and replace this file.",
+      "uri": "AOAI_GPT4O_ENDPOINT_PLACEHOLDER",
+      "context": "/document/normalized_images/*",
+      "inputs": [
+        { "name": "systemMessage", "source": "='You are a manufacturing SOP analyst. Describe this diagram precisely: what component, tool, action, torque/spec values, and any safety symbols are shown. Be concise and factual.'" },
+        { "name": "userMessage", "source": "='Describe this SOP figure for compliance retrieval.'" },
+        { "name": "image", "source": "/document/normalized_images/*/data" }
+      ],
+      "outputs": [
+        { "name": "response", "targetName": "image_caption" }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill",
+      "name": "embed-text",
+      "description": "Embed page text chunks.",
+      "context": "/document/text_sections/*",
+      "resourceUri": "AOAI_ENDPOINT_PLACEHOLDER",
+      "deploymentId": "text-embedding-3-large",
+      "modelName": "text-embedding-3-large",
+      "dimensions": 3072,
+      "inputs": [
+        { "name": "text", "source": "/document/text_sections/*/content" }
+      ],
+      "outputs": [
+        { "name": "embedding", "targetName": "text_vector" }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill",
+      "name": "embed-captions",
+      "description": "Embed verbalized diagram captions into the SAME 3072-dim space as text.",
+      "context": "/document/normalized_images/*",
+      "resourceUri": "AOAI_ENDPOINT_PLACEHOLDER",
+      "deploymentId": "text-embedding-3-large",
+      "modelName": "text-embedding-3-large",
+      "dimensions": 3072,
+      "inputs": [
+        { "name": "text", "source": "/document/normalized_images/*/image_caption" }
+      ],
+      "outputs": [
+        { "name": "embedding", "targetName": "caption_vector" }
+      ]
+    }
+  ],
+  "indexProjections": {
+    "selectors": [
+      {
+        "targetIndexName": "procedureguard-sop-index",
+        "parentKeyFieldName": "parent_id",
+        "sourceContext": "/document/text_sections/*",
+        "mappings": [
+          { "name": "content_text", "source": "/document/text_sections/*/content" },
+          { "name": "content_embedding", "source": "/document/text_sections/*/text_vector" },
+          { "name": "content_type", "source": "='text'" },
+          { "name": "document_title", "source": "/document/metadata_storage_name" }
+        ]
+      },
+      {
+        "targetIndexName": "procedureguard-sop-index",
+        "parentKeyFieldName": "parent_id",
+        "sourceContext": "/document/normalized_images/*",
+        "mappings": [
+          { "name": "content_text", "source": "/document/normalized_images/*/image_caption" },
+          { "name": "content_embedding", "source": "/document/normalized_images/*/caption_vector" },
+          { "name": "content_type", "source": "='image_caption'" },
+          { "name": "content_path", "source": "/document/normalized_images/*/imagePath" },
+          { "name": "document_title", "source": "/document/metadata_storage_name" }
+        ]
+      }
+    ],
+    "parameters": { "projectionMode": "skipIndexingParentDocuments" }
+  }
+}

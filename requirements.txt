@@ -1,0 +1,5 @@
+kagglehub>=0.3.0
+kaggle>=1.6.0
+azure-storage-blob>=12.19.0
+azure-search-documents==11.6.0b12
+requests>=2.31.0

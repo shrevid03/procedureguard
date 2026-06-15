@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Runtime caches and outputs
+.mm_cache/
+checklist.json
+verdicts.json
+multimodal_docs.json
+uploaded_blobs.json
+
+# Datasets (too large for git)
+data/openmarciea/
+data/IndustReal/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
