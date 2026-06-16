@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Agent 2 - Compliance Reasoning."""
+"""Agent 2 - Compliance Reasoning. Incremental: skips already-verified steps."""
 import json, os, random, time
 from pathlib import Path
 from openai import OpenAI
@@ -8,8 +8,6 @@ gpt = OpenAI(api_key=os.environ["GITHUB_TOKEN"], base_url=os.environ["GPT4O_BASE
 CHECKLIST_PATH = Path("checklist.json")
 OBSERVATIONS_PATH = Path("mock_observations.json")
 VERDICTS_PATH = Path("verdicts.json")
-
-# FILTER: only verify action steps (Chapters 2-7), skip policy (Ch 1) and rework (Ch 8)
 ACTION_CHAPTERS = {"2", "3", "4", "5", "6", "7"}
 
 def filter_action_steps(checklist):
@@ -80,37 +78,55 @@ def main():
     checklist = filter_action_steps(checklist)
     print(f"   {len(checklist)} action steps after filtering (Chapters {sorted(ACTION_CHAPTERS)})")
 
-    print("\n>> Generating mock video observations...")
-    observations = generate_mock_observations(checklist)
-    OBSERVATIONS_PATH.write_text(json.dumps(observations, indent=2))
-    print(f"   wrote {OBSERVATIONS_PATH}")
+    # Load existing verdicts so we can skip already-done steps
+    existing_verdicts = {}
+    if VERDICTS_PATH.exists():
+        existing_verdicts = json.loads(VERDICTS_PATH.read_text())
+        print(f"   {len(existing_verdicts)} verdicts already exist - will skip those")
 
-    print(f"\n>> Reasoning about each step with GPT-4o (~{len(checklist)*7} seconds)...")
-    verdicts = {}
-    for i, rule in enumerate(checklist):
-        rid = rule.get("chapter_step_id") or f"rule-{i}"
+    # Load or generate observations
+    if OBSERVATIONS_PATH.exists():
+        observations = json.loads(OBSERVATIONS_PATH.read_text())
+        print(f"   loaded existing {OBSERVATIONS_PATH}")
+    else:
+        print("\n>> Generating mock video observations...")
+        observations = generate_mock_observations(checklist)
+        OBSERVATIONS_PATH.write_text(json.dumps(observations, indent=2))
+        print(f"   wrote {OBSERVATIONS_PATH}")
+
+    # Process only steps without verdicts yet
+    pending = [r for r in checklist if str(r.get("chapter_step_id") or "") not in existing_verdicts]
+    print(f"\n>> {len(pending)} step(s) pending verdict (~{len(pending) * 7} seconds)")
+    if not pending:
+        print("\n[ok] All verdicts already complete. Nothing to do.")
+        return
+
+    verdicts = dict(existing_verdicts)  # start from existing
+    for rule in pending:
+        rid = rule.get("chapter_step_id") or "?"
         obs = observations.get(str(rid))
         print(f"-- Verdict for Step {rid} ({rule.get('action','?')[:55]})...")
         try:
             v = reason_about_step(rule, obs)
             verdicts[str(rid)] = v
             print(f"   {v.get('verdict','?'):24}  conf={v.get('confidence',0):.2f}")
+            # Save after EACH success so a partial run is never lost
+            VERDICTS_PATH.write_text(json.dumps(verdicts, indent=2))
         except Exception as e:
             err = str(e)
             if "429" in err or "RateLimit" in err:
-                print("   RATE LIMIT HIT - stopping. Saving partial verdicts.")
+                print("   RATE LIMIT HIT - stopping. Verdicts saved so far.")
                 break
             print(f"   ERROR: {err[:120]}")
         time.sleep(7)
 
-    VERDICTS_PATH.write_text(json.dumps(verdicts, indent=2))
-    print(f"\n[ok] wrote {VERDICTS_PATH} ({len(verdicts)} verdict(s))")
+    print(f"\n[ok] {VERDICTS_PATH} now has {len(verdicts)} verdict(s)")
     counts = {"Compliant": 0, "Deviation Detected": 0, "Unable to Verify": 0}
     for v in verdicts.values():
         counts[v.get("verdict", "Unable to Verify")] = counts.get(v.get("verdict", "Unable to Verify"), 0) + 1
     total = sum(counts.values())
     print(f"\n========== SUMMARY ==========")
-    print(f"  Total verified:        {total}")
+    print(f"  Total verified:        {total} / {len(checklist)}")
     if total:
         print(f"  Compliant:             {counts['Compliant']:3d}  ({100*counts['Compliant']/total:.1f}%)")
         print(f"  Deviation Detected:    {counts['Deviation Detected']:3d}  ({100*counts['Deviation Detected']/total:.1f}%)")

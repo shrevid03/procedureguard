@@ -61,5 +61,138 @@
     "confidence": 0.92,
     "evidence_timestamp": "00:02:16",
     "note": "The pin was installed with correct action and required component visible."
+  },
+  "3.5": {
+    "chapter_step_id": "3.5",
+    "verdict": "Compliant",
+    "confidence": 0.85,
+    "evidence_timestamp": "00:02:33",
+    "note": "The operator performed the required verification action with all necessary components visible and no deviation patterns observed."
+  },
+  "4.1": {
+    "chapter_step_id": "4.1",
+    "verdict": "Compliant",
+    "confidence": 0.94,
+    "evidence_timestamp": "00:02:50",
+    "note": "The operator verified the correct front bracket and screw as required by the rule."
+  },
+  "4.2": {
+    "chapter_step_id": "4.2",
+    "verdict": "Compliant",
+    "confidence": 0.81,
+    "evidence_timestamp": "00:02:07",
+    "note": "The observed action and components match the acceptance criterion."
+  },
+  "4.3": {
+    "chapter_step_id": "4.3",
+    "verdict": "Compliant",
+    "confidence": 0.93,
+    "evidence_timestamp": "00:03:24",
+    "note": "The observed action and components match the acceptance criterion, and no deviation patterns were detected."
+  },
+  "5.1": {
+    "chapter_step_id": "5.1",
+    "verdict": "Compliant",
+    "confidence": 0.92,
+    "evidence_timestamp": "00:03:41",
+    "note": "All required components were verified by the operator as present, meeting the acceptance criterion."
+  },
+  "5.2": {
+    "chapter_step_id": "5.2",
+    "verdict": "Deviation Detected",
+    "confidence": 0.72,
+    "evidence_timestamp": "00:03:58",
+    "note": "The wheels do not rotate freely and exhibit axial play, which matches a deviation pattern."
+  },
+  "5.3": {
+    "chapter_step_id": "5.3",
+    "verdict": "Unable to Verify",
+    "confidence": 0.32,
+    "evidence_timestamp": "00:03:15",
+    "note": "The observation is unclear due to obscured visibility and low confidence."
+  },
+  "5.4": {
+    "chapter_step_id": "5.4",
+    "verdict": "Compliant",
+    "confidence": 0.89,
+    "evidence_timestamp": "00:04:32",
+    "note": "All required components are present and the operator is performing the verification as specified."
+  },
+  "6.1": {
+    "chapter_step_id": "6.1",
+    "verdict": "Deviation Detected",
+    "confidence": 0.82,
+    "evidence_timestamp": "00:04:49",
+    "note": "Short rear chassis was set to state 1 instead of state 0, violating the acceptance criterion."
+  },
+  "6.2": {
+    "chapter_step_id": "6.2",
+    "verdict": "Deviation Detected",
+    "confidence": 0.83,
+    "evidence_timestamp": "00:04:06",
+    "note": "Front bracket was secured by a nut instead of a screw, which matches a deviation pattern."
+  },
+  "6.3": {
+    "chapter_step_id": "6.3",
+    "verdict": "Deviation Detected",
+    "confidence": 0.87,
+    "evidence_timestamp": "00:04:23",
+    "note": "The observation shows failure to record all required build details, matching a deviation pattern."
+  },
+  "7.1": {
+    "chapter_step_id": "7.1",
+    "verdict": "Deviation Detected",
+    "confidence": 0.76,
+    "evidence_timestamp": "00:05:40",
+    "note": "Vehicle was not verified at state 13, which matches a deviation pattern."
+  },
+  "7.2": {
+    "chapter_step_id": "7.2",
+    "verdict": "Unable to Verify",
+    "confidence": 0.85,
+    "evidence_timestamp": "00:05:57",
+    "note": "The observation does not confirm the exact count or segregation of components in the reuse tray."
+  },
+  "7.3": {
+    "chapter_step_id": "7.3",
+    "verdict": "Compliant",
+    "confidence": 0.83,
+    "evidence_timestamp": "00:05:14",
+    "note": "Both pins were removed axially and placed in the reuse tray as required."
+  },
+  "7.4": {
+    "chapter_step_id": "7.4",
+    "verdict": "Compliant",
+    "confidence": 0.94,
+    "evidence_timestamp": "00:05:31",
+    "note": "Observed action and components match the acceptance criterion."
+  },
+  "7.5": {
+    "chapter_step_id": "7.5",
+    "verdict": "Compliant",
+    "confidence": 0.89,
+    "evidence_timestamp": "00:06:48",
+    "note": "The observed components and action match the acceptance criterion, and no deviation patterns were detected."
+  },
+  "7.6": {
+    "chapter_step_id": "7.6",
+    "verdict": "Compliant",
+    "confidence": 0.91,
+    "evidence_timestamp": "00:06:05",
+    "note": "The observed action and components match the acceptance criterion with high confidence."
+  },
+  "7.7": {
+    "chapter_step_id": "7.7",
+    "verdict": "Unable to Verify",
+    "confidence": 0.86,
+    "evidence_timestamp": "00:06:22",
+    "note": "The observation does not confirm if the wheels rotate freely or if the reuse tray is empty."
+  },
+  "7.8": {
+    "chapter_step_id": "7.8",
+    "verdict": "Unable to Verify",
+    "confidence": 0.46,
+    "evidence_timestamp": "00:06:39",
+    "note": "The observation is unclear due to obscured work area and low confidence."
   }
 }
