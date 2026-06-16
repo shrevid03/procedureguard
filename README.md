@@ -44,6 +44,27 @@ Layer 3 AI AGENTS      → Retrieval functions Agent 1 / Agent 3 call   (script 
 
 ---
 
+## View the dashboard & website locally
+
+**Animated website** (earthy interactive UI):
+```bash
+python3 -m http.server 8765 --directory web
+```
+Then open `http://localhost:8765` in your browser.
+
+**Streamlit compliance dashboard:**
+```bash
+streamlit run scripts/08_dashboard.py
+```
+Then open `http://localhost:8501` in your browser.
+
+**Refresh website data** after a new pipeline run:
+```bash
+python3 scripts/build_web.py
+```
+
+---
+
 ## Prerequisites
 
 - Azure subscription with permission to create resources
