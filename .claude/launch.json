@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "procedureguard-web",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "web"],
+      "port": 8765
+    },
+    {
+      "name": "procedureguard-dashboard",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "streamlit", "run", "scripts/08_dashboard.py",
+                      "--server.port", "8766", "--server.headless", "true",
+                      "--browser.gatherUsageStats", "false"],
+      "port": 8766
+    }
+  ]
+}
