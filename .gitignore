@@ -28,3 +28,10 @@ data/IndustReal/
 # IDE
 .vscode/
 .idea/
+
+# Agent tooling / skill installs (reproduce via: npx skills add ..., npx impeccable install)
+.agents/
+.codex/
+.claude/skills/
+.claude/settings.local.json
+skills-lock.json
