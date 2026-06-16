@@ -1,0 +1,297 @@
+{
+  "2.1": {
+    "timestamp": "00:00:00",
+    "scene_description": "Operator performs: verify parts required for this chapter.. Components visible: Base plate - white, Front chassis brace set - white, Front chassis pin - silver.",
+    "components_seen": [
+      "Base plate - white",
+      "Front chassis brace set - white",
+      "Front chassis pin - silver"
+    ],
+    "operator_action": "Verify parts required for this chapter.",
+    "confidence": 0.8
+  },
+  "2.2": {
+    "timestamp": "00:00:17",
+    "scene_description": "Operator performs: place the base on a flat surface in the standard orientation and inspect for damage or warping.. Components visible: base.",
+    "components_seen": [
+      "base"
+    ],
+    "operator_action": "Place the base on a flat surface in the standard orientation and inspect for damage or warping.",
+    "confidence": 0.83
+  },
+  "2.3": {
+    "timestamp": "00:00:34",
+    "scene_description": "Operator attempts: install the front chassis onto the base. Anomaly: Misaligned front chassis",
+    "components_seen": [
+      "front chassis",
+      "WRONG_PART_X2"
+    ],
+    "operator_action": "deviation: Misaligned front chassis",
+    "confidence": 0.82
+  },
+  "2.4": {
+    "timestamp": "00:00:51",
+    "scene_description": "Operator performs: install the front chassis pin. Components visible: front chassis pin.",
+    "components_seen": [
+      "front chassis pin"
+    ],
+    "operator_action": "Install the front chassis pin",
+    "confidence": 0.81
+  },
+  "2.5": {
+    "timestamp": "00:01:08",
+    "scene_description": "Operator performs: verify front chassis assembly completion.. Components visible: base, front chassis, front pin.",
+    "components_seen": [
+      "base",
+      "front chassis",
+      "front pin"
+    ],
+    "operator_action": "Verify front chassis assembly completion.",
+    "confidence": 0.89
+  },
+  "3.1": {
+    "timestamp": "00:01:25",
+    "scene_description": "Operator performs: verify parts required for rear chassis assembly.. Components visible: Long braces (2x) - white, Front-rear chassis pin (1x) - silver, Rear-rear chassis pin (1x) - silver.",
+    "components_seen": [
+      "Long braces (2x) - white",
+      "Front-rear chassis pin (1x) - silver",
+      "Rear-rear chassis pin (1x) - silver"
+    ],
+    "operator_action": "Verify parts required for rear chassis assembly.",
+    "confidence": 0.91
+  },
+  "3.2": {
+    "timestamp": "00:01:42",
+    "scene_description": "Operator attempts: install the rear chassis by aligning and fitting the long braces.. Anomaly: Bores are not aligned concentrically.",
+    "components_seen": [
+      "rear chassis",
+      "WRONG_PART_X6"
+    ],
+    "operator_action": "deviation: Bores are not aligned concentrically.",
+    "confidence": 0.74
+  },
+  "3.3": {
+    "timestamp": "00:01:59",
+    "scene_description": "Operator performs: install the front-rear chassis pin. Components visible: front-rear chassis pin.",
+    "components_seen": [
+      "front-rear chassis pin"
+    ],
+    "operator_action": "Install the front-rear chassis pin",
+    "confidence": 0.92
+  },
+  "3.4": {
+    "timestamp": "00:02:16",
+    "scene_description": "Operator performs: install the rear-rear chassis pin. Components visible: rear-rear chassis pin.",
+    "components_seen": [
+      "rear-rear chassis pin"
+    ],
+    "operator_action": "Install the rear-rear chassis pin",
+    "confidence": 0.92
+  },
+  "3.5": {
+    "timestamp": "00:02:33",
+    "scene_description": "Operator performs: verify rear chassis assembly and alignment.. Components visible: base, front chassis, front pin.",
+    "components_seen": [
+      "base",
+      "front chassis",
+      "front pin",
+      "rear chassis",
+      "fr-rear pin",
+      "rr-rear pin"
+    ],
+    "operator_action": "Verify rear chassis assembly and alignment.",
+    "confidence": 0.85
+  },
+  "4.1": {
+    "timestamp": "00:02:50",
+    "scene_description": "Operator performs: verify parts required for this chapter.. Components visible: Front bracket (1x) - white, with magenta wing per configuration, Front bracket screw (1x) - threaded shank with head.",
+    "components_seen": [
+      "Front bracket (1x) - white, with magenta wing per configuration",
+      "Front bracket screw (1x) - threaded shank with head"
+    ],
+    "operator_action": "Verify parts required for this chapter.",
+    "confidence": 0.94
+  },
+  "4.2": {
+    "timestamp": "00:02:07",
+    "scene_description": "Operator performs: mount the front bracket. Components visible: front bracket, front chassis interface.",
+    "components_seen": [
+      "front bracket",
+      "front chassis interface"
+    ],
+    "operator_action": "Mount the front bracket",
+    "confidence": 0.81
+  },
+  "4.3": {
+    "timestamp": "00:03:24",
+    "scene_description": "Operator performs: install the front bracket screw by hand and tighten to firm finger torque.. Components visible: front bracket, bracket screw.",
+    "components_seen": [
+      "front bracket",
+      "bracket screw"
+    ],
+    "operator_action": "Install the front bracket screw by hand and tighten to firm finger torque.",
+    "confidence": 0.93
+  },
+  "5.1": {
+    "timestamp": "00:03:41",
+    "scene_description": "Operator performs: verify parts required for wheel assembly chapter. Components visible: Wheels (4x) - black, Washers (4x) - magenta, Acorn nuts (4x) - magenta.",
+    "components_seen": [
+      "Wheels (4x) - black",
+      "Washers (4x) - magenta",
+      "Acorn nuts (4x) - magenta",
+      "Rear pulley (1x) - magenta"
+    ],
+    "operator_action": "Verify parts required for wheel assembly chapter",
+    "confidence": 0.92
+  },
+  "5.2": {
+    "timestamp": "00:03:58",
+    "scene_description": "Operator attempts: install the front wheel assembly. Anomaly: Wheels do not rotate freely or exhibit axial play.",
+    "components_seen": [
+      "front axle",
+      "WRONG_PART_X14"
+    ],
+    "operator_action": "deviation: Wheels do not rotate freely or exhibit axial play.",
+    "confidence": 0.72
+  },
+  "5.3": {
+    "timestamp": "00:03:15",
+    "scene_description": "Hands obscure work area. Action not clearly visible.",
+    "components_seen": [],
+    "operator_action": "unclear",
+    "confidence": 0.32
+  },
+  "5.4": {
+    "timestamp": "00:04:32",
+    "scene_description": "Operator performs: verify wheel assembly components and installation.. Components visible: washer (4x), acorn nuts (4x), rear pulley.",
+    "components_seen": [
+      "washer (4x)",
+      "acorn nuts (4x)",
+      "rear pulley",
+      "front chassis",
+      "rear chassis",
+      "front pin",
+      "fr-rear pin",
+      "rr-rear pin",
+      "front bracket",
+      "bracket screw",
+      "front wheels",
+      "rear wheels"
+    ],
+    "operator_action": "Verify wheel assembly components and installation.",
+    "confidence": 0.89
+  },
+  "6.1": {
+    "timestamp": "00:04:49",
+    "scene_description": "Operator attempts: verify the complete vehicle state component by component against the specified configuration.. Anomaly: Short rear chassis set to state 1 instead of state 0.",
+    "components_seen": [
+      "base",
+      "WRONG_PART_X17"
+    ],
+    "operator_action": "deviation: Short rear chassis set to state 1 instead of state 0.",
+    "confidence": 0.82
+  },
+  "6.2": {
+    "timestamp": "00:04:06",
+    "scene_description": "Operator attempts: perform fastener and hardware audit. Anomaly: Front bracket secured by a nut instead of a screw or not fully tightened",
+    "components_seen": [
+      "front bracket screw",
+      "WRONG_PART_X18"
+    ],
+    "operator_action": "deviation: Front bracket secured by a nut instead of a screw or not fully tightened",
+    "confidence": 0.83
+  },
+  "6.3": {
+    "timestamp": "00:04:23",
+    "scene_description": "Operator attempts: record the build details and determine disposition.. Anomaly: Failure to record all required build details.",
+    "components_seen": [
+      "build record form",
+      "WRONG_PART_X19"
+    ],
+    "operator_action": "deviation: Failure to record all required build details.",
+    "confidence": 0.87
+  },
+  "7.1": {
+    "timestamp": "00:05:40",
+    "scene_description": "Operator attempts: verify parts and prerequisites before starting the procedure.. Anomaly: Vehicle not verified at state 13.",
+    "components_seen": [
+      "Completed vehicle at state 13 (cover strip)",
+      "WRONG_PART_X20"
+    ],
+    "operator_action": "deviation: Vehicle not verified at state 13.",
+    "confidence": 0.76
+  },
+  "7.2": {
+    "timestamp": "00:05:57",
+    "scene_description": "Operator performs: remove the rear wheel assembly and organize hardware in the reuse tray.. Components visible: rear acorn nuts, washers, wheels.",
+    "components_seen": [
+      "rear acorn nuts",
+      "washers",
+      "wheels",
+      "pulley",
+      "reuse tray"
+    ],
+    "operator_action": "Remove the rear wheel assembly and organize hardware in the reuse tray.",
+    "confidence": 0.85
+  },
+  "7.3": {
+    "timestamp": "00:05:14",
+    "scene_description": "Operator performs: remove both rear chassis pins. Components visible: front-rear pin, rear-rear pin, reuse tray.",
+    "components_seen": [
+      "front-rear pin",
+      "rear-rear pin",
+      "reuse tray"
+    ],
+    "operator_action": "Remove both rear chassis pins",
+    "confidence": 0.83
+  },
+  "7.4": {
+    "timestamp": "00:05:31",
+    "scene_description": "Operator performs: remove the long rear chassis and tag it as 'removed - long configuration'.. Components visible: long-brace rear chassis, work order.",
+    "components_seen": [
+      "long-brace rear chassis",
+      "work order"
+    ],
+    "operator_action": "Remove the long rear chassis and tag it as 'removed - long configuration'.",
+    "confidence": 0.94
+  },
+  "7.5": {
+    "timestamp": "00:06:48",
+    "scene_description": "Operator performs: install the short rear chassis. Components visible: short rear chassis, short braces.",
+    "components_seen": [
+      "short rear chassis",
+      "short braces"
+    ],
+    "operator_action": "Install the short rear chassis",
+    "confidence": 0.89
+  },
+  "7.6": {
+    "timestamp": "00:06:05",
+    "scene_description": "Operator performs: reinstall both rear chassis pins. Components visible: rear chassis pins, reuse tray.",
+    "components_seen": [
+      "rear chassis pins",
+      "reuse tray"
+    ],
+    "operator_action": "Reinstall both rear chassis pins",
+    "confidence": 0.91
+  },
+  "7.7": {
+    "timestamp": "00:06:22",
+    "scene_description": "Operator performs: reinstall the rear wheel assembly using components from the reuse tray.. Components visible: pulley, wheel, washer.",
+    "components_seen": [
+      "pulley",
+      "wheel",
+      "washer",
+      "acorn nut"
+    ],
+    "operator_action": "Reinstall the rear wheel assembly using components from the reuse tray.",
+    "confidence": 0.86
+  },
+  "7.8": {
+    "timestamp": "00:06:39",
+    "scene_description": "Hands obscure work area. Action not clearly visible.",
+    "components_seen": [],
+    "operator_action": "unclear",
+    "confidence": 0.46
+  }
+}

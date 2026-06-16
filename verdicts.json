@@ -1,0 +1,65 @@
+{
+  "2.1": {
+    "chapter_step_id": "2.1",
+    "verdict": "Compliant",
+    "confidence": 0.8,
+    "evidence_timestamp": "00:00:00",
+    "note": "All required parts were present and the operator performed the verification action."
+  },
+  "2.2": {
+    "chapter_step_id": "2.2",
+    "verdict": "Compliant",
+    "confidence": 0.83,
+    "evidence_timestamp": "00:00:17",
+    "note": "The base was placed on a flat surface in the standard orientation and inspected for damage or warping as required."
+  },
+  "2.3": {
+    "chapter_step_id": "2.3",
+    "verdict": "Deviation Detected",
+    "confidence": 0.82,
+    "evidence_timestamp": "00:00:34",
+    "note": "The observation shows a misaligned front chassis, which matches a deviation pattern."
+  },
+  "2.4": {
+    "chapter_step_id": "2.4",
+    "verdict": "Unable to Verify",
+    "confidence": 0.81,
+    "evidence_timestamp": "00:00:51",
+    "note": "The observation does not confirm if the pin meets all acceptance criteria such as type, length, color, seating, and orientation."
+  },
+  "2.5": {
+    "chapter_step_id": "2.5",
+    "verdict": "Compliant",
+    "confidence": 0.89,
+    "evidence_timestamp": "00:01:08",
+    "note": "The operator performed the verification action with all required components visible and no deviation patterns observed."
+  },
+  "3.1": {
+    "chapter_step_id": "3.1",
+    "verdict": "Compliant",
+    "confidence": 0.91,
+    "evidence_timestamp": "00:01:25",
+    "note": "The operator verified the correct components as specified in the rule."
+  },
+  "3.2": {
+    "chapter_step_id": "3.2",
+    "verdict": "Deviation Detected",
+    "confidence": 0.74,
+    "evidence_timestamp": "00:01:42",
+    "note": "The bores are not aligned concentrically, which matches a deviation pattern."
+  },
+  "3.3": {
+    "chapter_step_id": "3.3",
+    "verdict": "Unable to Verify",
+    "confidence": 0.92,
+    "evidence_timestamp": "00:01:59",
+    "note": "The observation does not confirm if the pin is fully seated, correctly oriented, or in the correct bore position."
+  },
+  "3.4": {
+    "chapter_step_id": "3.4",
+    "verdict": "Compliant",
+    "confidence": 0.92,
+    "evidence_timestamp": "00:02:16",
+    "note": "The pin was installed with correct action and required component visible."
+  }
+}

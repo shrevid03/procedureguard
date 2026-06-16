@@ -1,0 +1,646 @@
+[
+  {
+    "chapter_step_id": "1.1",
+    "action": "Understand the scope and application of the manual",
+    "check_type": "verification",
+    "components_required": [],
+    "acceptance_criterion": "Operator demonstrates understanding of the two procedures, the 11-component state model, and the notation system used in the manual.",
+    "deviation_patterns": [
+      "Failure to distinguish between Procedure A and Procedure B",
+      "Misinterpretation of the 11-component state model",
+      "Confusion regarding the notation system (orange, red, blue, green, magenta)"
+    ]
+  },
+  {
+    "chapter_step_id": "1.2",
+    "action": "Understand the tools and fastening method.",
+    "check_type": "verification",
+    "components_required": [],
+    "acceptance_criterion": "Operator must confirm that all fastening is performed by hand using push-fit pins and finger-tightened screws and acorn nuts, without any tools.",
+    "deviation_patterns": [
+      "Using pliers, drivers, or other tools.",
+      "Applying excessive torque that cracks printed PLA bosses."
+    ]
+  },
+  {
+    "chapter_step_id": "1.3",
+    "action": "Sort all parts by color and verify completeness against the chapter parts list.",
+    "check_type": "verification",
+    "components_required": [
+      "White PLA",
+      "Silver metallic PLA",
+      "Magenta PLA",
+      "Black tough PLA"
+    ],
+    "acceptance_criterion": "All parts are sorted by color and verified to be complete and undamaged.",
+    "deviation_patterns": [
+      "Parts are not sorted by color.",
+      "Parts are missing or incomplete.",
+      "Damaged or warped parts are not rejected."
+    ]
+  },
+  {
+    "chapter_step_id": "1.4",
+    "action": "Verify the type and length of every fastener against the instruction for that step before installation.",
+    "check_type": "verification",
+    "components_required": [
+      "washers",
+      "nuts",
+      "screws",
+      "pins"
+    ],
+    "acceptance_criterion": "Each fastener matches the specified type and length in the instruction for the step.",
+    "deviation_patterns": [
+      "Installation of a wrong pin type.",
+      "Substitution of an acorn nut for the bracket screw."
+    ]
+  },
+  {
+    "chapter_step_id": "1.5",
+    "action": "Compare the build to the verification strip at every checkpoint.",
+    "check_type": "verification",
+    "components_required": [
+      "base",
+      "front chassis",
+      "front chassis pin",
+      "rear chassis",
+      "short rear chassis",
+      "front-rear pin",
+      "rear-rear pin",
+      "front bracket",
+      "bracket screw",
+      "front wheel assembly",
+      "rear wheel assembly"
+    ],
+    "acceptance_criterion": "Each component's installation status matches the corresponding box on the verification strip (orange 1 for installed, white 0 for not installed).",
+    "deviation_patterns": [
+      "Mismatch between build and verification strip",
+      "Failure to stop work upon detecting a nonconformance"
+    ]
+  },
+  {
+    "chapter_step_id": "1.6",
+    "action": "Understand execution-order policy",
+    "check_type": "verification",
+    "components_required": [],
+    "acceptance_criterion": "Operator understands that Chapters 2 and 3 may be executed in either order, pin order may be interchangeable where stated, and all checkpoints must pass before work continues.",
+    "deviation_patterns": [
+      "Skipping checkpoints before continuing work.",
+      "Considering a step complete without correct installation and tightening of components.",
+      "Misinterpreting interchangeable pin order or execution sequence flexibility."
+    ]
+  },
+  {
+    "chapter_step_id": "1.7",
+    "action": "Remove both hands from the assembly before verification.",
+    "check_type": "verification",
+    "components_required": [],
+    "acceptance_criterion": "The operator must ensure an unobstructed view of the build state for verification.",
+    "deviation_patterns": [
+      "Hands remain on the assembly during verification.",
+      "Verification performed over an unverified or suspect step."
+    ]
+  },
+  {
+    "chapter_step_id": "1.8",
+    "action": "Fabricate replacement parts using specified parameters.",
+    "check_type": "verification",
+    "components_required": [
+      "3D printer",
+      "STEMFIE SPS-000001 part geometries"
+    ],
+    "acceptance_criterion": "Verify that all 36 parts are fabricated with 0.3 mm layer height, 15% infill, 50 mm/s speed, raft build-plate adhesion, and 0.5 mm hole horizontal expansion.",
+    "deviation_patterns": [
+      "Layer height is not set to 0.3 mm.",
+      "Infill percentage is not set to 15%.",
+      "Printing speed is not set to 50 mm/s.",
+      "Build-plate adhesion is not set to raft.",
+      "Hole horizontal expansion is not set to 0.5 mm."
+    ]
+  },
+  {
+    "chapter_step_id": "1.9",
+    "action": "Select the applicable procedure from the work order",
+    "check_type": "verification",
+    "components_required": [],
+    "acceptance_criterion": "The operator must correctly identify and select the procedure based on the work order and verify the unit state if Procedure B is chosen.",
+    "deviation_patterns": [
+      "Incorrect procedure selected from the work order.",
+      "Failure to verify incoming unit state for Procedure B.",
+      "Proceeding with Procedure B without dispositioning a unit not at state 13."
+    ]
+  },
+  {
+    "chapter_step_id": "2.1",
+    "action": "Verify parts required for this chapter.",
+    "check_type": "verification",
+    "components_required": [
+      "Base plate - white",
+      "Front chassis brace set - white",
+      "Front chassis pin - silver"
+    ],
+    "acceptance_criterion": "Operator confirms the presence of all required parts and verifies the pin type and length against the work instruction.",
+    "deviation_patterns": [
+      "Missing required parts",
+      "Incorrect pin type or length used"
+    ]
+  },
+  {
+    "chapter_step_id": "2.2",
+    "action": "Place the base on a flat surface in the standard orientation and inspect for damage or warping.",
+    "check_type": "verification",
+    "components_required": [
+      "base"
+    ],
+    "acceptance_criterion": "The base is placed on a flat surface in the standard orientation and is free of damage or warping.",
+    "deviation_patterns": [
+      "Base is not placed on a flat surface.",
+      "Base is not in the standard orientation.",
+      "Base shows signs of damage or warping."
+    ]
+  },
+  {
+    "chapter_step_id": "2.3",
+    "action": "Install the front chassis onto the base",
+    "check_type": "verification",
+    "components_required": [
+      "front chassis",
+      "base"
+    ],
+    "acceptance_criterion": "The front chassis must be fully seated with no gap at the joint, bores aligned, and squareness verified.",
+    "deviation_patterns": [
+      "Misaligned front chassis",
+      "Gap at the joint",
+      "Bores not aligned",
+      "Squareness not verified"
+    ]
+  },
+  {
+    "chapter_step_id": "2.4",
+    "action": "Install the front chassis pin",
+    "check_type": "verification",
+    "components_required": [
+      "front chassis pin"
+    ],
+    "acceptance_criterion": "The pin must be of the correct type, correct length, silver, fully seated through aligned bores, and have the correct head orientation as per the work instruction.",
+    "deviation_patterns": [
+      "Wrong pin type",
+      "Reversed pin orientation"
+    ]
+  },
+  {
+    "chapter_step_id": "2.5",
+    "action": "Verify front chassis assembly completion.",
+    "check_type": "verification",
+    "components_required": [
+      "base",
+      "front chassis",
+      "front pin"
+    ],
+    "acceptance_criterion": "Front chassis is flush, fully engaged, correctly oriented, cannot rotate or lift from the base, and matches the specified build configuration.",
+    "deviation_patterns": [
+      "Front chassis not flush or fully engaged.",
+      "Incorrect type or orientation of front pin.",
+      "Front chassis rotates or lifts from the base.",
+      "Hands obstructing the view during verification.",
+      "Build does not match the specified configuration."
+    ]
+  },
+  {
+    "chapter_step_id": "3.1",
+    "action": "Verify parts required for rear chassis assembly.",
+    "check_type": "verification",
+    "components_required": [
+      "Long braces (2x) - white",
+      "Front-rear chassis pin (1x) - silver",
+      "Rear-rear chassis pin (1x) - silver"
+    ],
+    "acceptance_criterion": "Ensure the operator uses long braces and correct chassis pins as specified, and verifies brace lengths if in doubt.",
+    "deviation_patterns": [
+      "Using short braces instead of long braces.",
+      "Using incorrect chassis pins.",
+      "Failing to compare brace lengths when uncertain."
+    ]
+  },
+  {
+    "chapter_step_id": "3.2",
+    "action": "Install the rear chassis by aligning and fitting the long braces.",
+    "check_type": "verification",
+    "components_required": [
+      "rear chassis",
+      "long braces"
+    ],
+    "acceptance_criterion": "The long braces must sit parallel and their bores must be concentric with the base bores.",
+    "deviation_patterns": [
+      "Braces are not parallel.",
+      "Bores are not aligned concentrically.",
+      "Braces are improperly fitted to the rear interface."
+    ]
+  },
+  {
+    "chapter_step_id": "3.3",
+    "action": "Install the front-rear chassis pin",
+    "check_type": "sequence",
+    "components_required": [
+      "front-rear chassis pin"
+    ],
+    "acceptance_criterion": "The pin is fully seated in the forward bore position of the rear chassis with correct orientation.",
+    "deviation_patterns": [
+      "Pin is not fully seated.",
+      "Pin is inserted in the incorrect bore position.",
+      "Pin orientation is incorrect."
+    ]
+  },
+  {
+    "chapter_step_id": "3.4",
+    "action": "Install the rear-rear chassis pin",
+    "check_type": "verification",
+    "components_required": [
+      "rear-rear chassis pin"
+    ],
+    "acceptance_criterion": "The pin must be fully seated in the rearmost bore position with correct orientation and type.",
+    "deviation_patterns": [
+      "wrong pin type",
+      "reversed pin orientation",
+      "pin not fully seated"
+    ]
+  },
+  {
+    "chapter_step_id": "3.5",
+    "action": "Verify rear chassis assembly and alignment.",
+    "check_type": "verification",
+    "components_required": [
+      "base",
+      "front chassis",
+      "front pin",
+      "rear chassis",
+      "fr-rear pin",
+      "rr-rear pin"
+    ],
+    "acceptance_criterion": "Both pins must be fully seated, of correct type and orientation; rear chassis must be secure with no play and braces parallel; build must match the specified strip configuration.",
+    "deviation_patterns": [
+      "Pins not fully seated or incorrect type/orientation.",
+      "Rear chassis has play or braces are not parallel.",
+      "Build does not match the specified strip configuration."
+    ]
+  },
+  {
+    "chapter_step_id": "4.1",
+    "action": "Verify parts required for this chapter.",
+    "check_type": "verification",
+    "components_required": [
+      "Front bracket (1x) - white, with magenta wing per configuration",
+      "Front bracket screw (1x) - threaded shank with head"
+    ],
+    "acceptance_criterion": "Operator confirms the presence of the correct front bracket and front bracket screw, ensuring the screw is positively identified and not substituted with acorn nuts.",
+    "deviation_patterns": [
+      "Using acorn nuts instead of the front bracket screw.",
+      "Proceeding without completing Chapters 2 and 3."
+    ]
+  },
+  {
+    "chapter_step_id": "4.2",
+    "action": "Mount the front bracket",
+    "check_type": "verification",
+    "components_required": [
+      "front bracket",
+      "front chassis interface"
+    ],
+    "acceptance_criterion": "The front bracket must be aligned square to the vehicle centerline with bores properly aligned.",
+    "deviation_patterns": [
+      "Bracket not square to the vehicle centerline",
+      "Bores misaligned with the chassis interface"
+    ]
+  },
+  {
+    "chapter_step_id": "4.3",
+    "action": "Install the front bracket screw by hand and tighten to firm finger torque.",
+    "check_type": "verification",
+    "components_required": [
+      "front bracket",
+      "bracket screw"
+    ],
+    "acceptance_criterion": "The screw is fully threaded, head seated flush, and confirmed to be the correct screw by head shape.",
+    "deviation_patterns": [
+      "Screw not fully threaded or head not seated flush.",
+      "Incorrect fastener installed, such as an acorn nut instead of the screw."
+    ]
+  },
+  {
+    "chapter_step_id": "5.1",
+    "action": "Verify parts required for wheel assembly chapter",
+    "check_type": "verification",
+    "components_required": [
+      "Wheels (4x) - black",
+      "Washers (4x) - magenta",
+      "Acorn nuts (4x) - magenta",
+      "Rear pulley (1x) - magenta"
+    ],
+    "acceptance_criterion": "Operator must confirm all listed parts are present, with special attention to counting washers to avoid omission.",
+    "deviation_patterns": [
+      "Failure to count washers before starting",
+      "Omission of wheel washers during assembly"
+    ]
+  },
+  {
+    "chapter_step_id": "5.2",
+    "action": "Install the front wheel assembly",
+    "check_type": "sequence",
+    "components_required": [
+      "front axle",
+      "wheel",
+      "washer",
+      "acorn nut"
+    ],
+    "acceptance_criterion": "Both wheels rotate freely with no axial play after assembly.",
+    "deviation_patterns": [
+      "Incorrect stack order of components on the front axle.",
+      "Acorn nuts not tightened to firm finger torque.",
+      "Wheels do not rotate freely or exhibit axial play."
+    ]
+  },
+  {
+    "chapter_step_id": "5.3",
+    "action": "Install the rear wheel assembly",
+    "check_type": "sequence",
+    "components_required": [
+      "rear pulley",
+      "rear axle",
+      "wheel",
+      "washer",
+      "acorn nut"
+    ],
+    "acceptance_criterion": "The rear pulley is installed before the wheels, and both wheels rotate freely with the pulley present and seated.",
+    "deviation_patterns": [
+      "Rear pulley missing after wheel installation",
+      "Rear pulley not seated properly",
+      "Wheels do not rotate freely",
+      "Incorrect assembly order of components"
+    ]
+  },
+  {
+    "chapter_step_id": "5.4",
+    "action": "Verify wheel assembly components and installation.",
+    "check_type": "verification",
+    "components_required": [
+      "washer (4x)",
+      "acorn nuts (4x)",
+      "rear pulley",
+      "front chassis",
+      "rear chassis",
+      "front pin",
+      "fr-rear pin",
+      "rr-rear pin",
+      "front bracket",
+      "bracket screw",
+      "front wheels",
+      "rear wheels"
+    ],
+    "acceptance_criterion": "All washers, acorn nuts, rear pulley, and specified components are present, properly seated, and tightened to firm finger torque; assembly matches the reference strip if Chapter 4 is complete.",
+    "deviation_patterns": [
+      "Missing washer behind any wheel.",
+      "Acorn nuts not tightened to firm finger torque.",
+      "Rear pulley not present or improperly seated.",
+      "Hands obstructing the view during verification.",
+      "Assembly does not match the reference strip."
+    ]
+  },
+  {
+    "chapter_step_id": "6.1",
+    "action": "Verify the complete vehicle state component by component against the specified configuration.",
+    "check_type": "verification",
+    "components_required": [
+      "base",
+      "front chassis",
+      "front pin",
+      "rear chassis",
+      "short rear chassis",
+      "front-rear pin",
+      "rear-rear pin",
+      "front bracket",
+      "bracket screw",
+      "front wheels",
+      "rear wheels"
+    ],
+    "acceptance_criterion": "All components must be at state 1 except the short rear chassis, which must remain at state 0, resulting in state 13 for complete assembly.",
+    "deviation_patterns": [
+      "Any component not matching the specified state configuration.",
+      "Short rear chassis set to state 1 instead of state 0."
+    ]
+  },
+  {
+    "chapter_step_id": "6.2",
+    "action": "Perform fastener and hardware audit",
+    "check_type": "verification",
+    "components_required": [
+      "front bracket screw",
+      "pins",
+      "acorn nuts",
+      "washers",
+      "rear pulley",
+      "wing",
+      "wheels"
+    ],
+    "acceptance_criterion": "All fasteners and hardware are correctly installed, tightened, oriented, and functional as specified.",
+    "deviation_patterns": [
+      "Front bracket secured by a nut instead of a screw or not fully tightened",
+      "Incorrect type, orientation, or seating of any of the four pins",
+      "Loose acorn nuts, missing washers behind wheels, missing rear pulley, or missing wing",
+      "Wheels do not rotate freely or components exhibit play"
+    ]
+  },
+  {
+    "chapter_step_id": "6.3",
+    "action": "Record the build details and determine disposition.",
+    "check_type": "verification",
+    "components_required": [
+      "build record form",
+      "inspection checklist"
+    ],
+    "acceptance_criterion": "The build record must include executed step order, checkpoint results, and the final state vector; disposition must be correctly determined as PASS or FAIL.",
+    "deviation_patterns": [
+      "Failure to record all required build details.",
+      "Incorrect determination of PASS or FAIL disposition.",
+      "Releasing a vehicle marked as FAIL without quarantine."
+    ]
+  },
+  {
+    "chapter_step_id": "7.1",
+    "action": "Verify parts and prerequisites before starting the procedure.",
+    "check_type": "verification",
+    "components_required": [
+      "Completed vehicle at state 13 (cover strip)",
+      "Short braces (2x) - white, upgrade stock",
+      "Empty, segregated reuse tray (1x)"
+    ],
+    "acceptance_criterion": "Ensure all required parts are present and the vehicle is verified at state 13 before beginning work.",
+    "deviation_patterns": [
+      "Missing short braces or reuse tray.",
+      "Vehicle not verified at state 13.",
+      "Front-end fasteners loosened unnecessarily."
+    ]
+  },
+  {
+    "chapter_step_id": "7.2",
+    "action": "Remove the rear wheel assembly and organize hardware in the reuse tray.",
+    "check_type": "verification",
+    "components_required": [
+      "rear acorn nuts",
+      "washers",
+      "wheels",
+      "pulley",
+      "reuse tray"
+    ],
+    "acceptance_criterion": "The reuse tray contains exactly 2 wheels, 2 washers, 2 nuts, and 1 pulley, segregated from surplus stock.",
+    "deviation_patterns": [
+      "Failure to unscrew acorn nuts by hand.",
+      "Mixing reuse hardware with station surplus stock.",
+      "Incorrect count of components in the reuse tray."
+    ]
+  },
+  {
+    "chapter_step_id": "7.3",
+    "action": "Remove both rear chassis pins",
+    "check_type": "verification",
+    "components_required": [
+      "front-rear pin",
+      "rear-rear pin",
+      "reuse tray"
+    ],
+    "acceptance_criterion": "Both pins are withdrawn axially and placed in the reuse tray, with bores clear and undamaged.",
+    "deviation_patterns": [
+      "Pins are levered against the printed bores.",
+      "Pins are not withdrawn axially.",
+      "Pins are not placed in the reuse tray.",
+      "Bores are damaged or obstructed."
+    ]
+  },
+  {
+    "chapter_step_id": "7.4",
+    "action": "Remove the long rear chassis and tag it as 'removed - long configuration'.",
+    "check_type": "verification",
+    "components_required": [
+      "long-brace rear chassis",
+      "work order"
+    ],
+    "acceptance_criterion": "The rear end is stripped, the front end remains intact, and the removed long braces are tagged and routed per the work order without entering the reuse tray.",
+    "deviation_patterns": [
+      "Long braces are not tagged correctly.",
+      "Long braces are placed in the reuse tray.",
+      "Front end is disturbed during removal.",
+      "Rear end does not match the stripped configuration."
+    ]
+  },
+  {
+    "chapter_step_id": "7.5",
+    "action": "Install the short rear chassis",
+    "check_type": "verification",
+    "components_required": [
+      "short rear chassis",
+      "short braces"
+    ],
+    "acceptance_criterion": "Short braces must be aligned parallel with bores concentric at the rear interface, and verified to be shorter than the removed long brace.",
+    "deviation_patterns": [
+      "Using a long brace instead of a short brace.",
+      "Misalignment of braces causing non-parallel positioning.",
+      "Bores not concentric during installation."
+    ]
+  },
+  {
+    "chapter_step_id": "7.6",
+    "action": "Reinstall both rear chassis pins",
+    "check_type": "verification",
+    "components_required": [
+      "rear chassis pins",
+      "reuse tray"
+    ],
+    "acceptance_criterion": "Both pins must be of the correct type and orientation, fully seated, and the chassis must be secure with no play.",
+    "deviation_patterns": [
+      "Incorrect pin type used",
+      "Pins not fully seated",
+      "Pins installed with incorrect orientation",
+      "Chassis has play after installation"
+    ]
+  },
+  {
+    "chapter_step_id": "7.7",
+    "action": "Reinstall the rear wheel assembly using components from the reuse tray.",
+    "check_type": "verification",
+    "components_required": [
+      "pulley",
+      "wheel",
+      "washer",
+      "acorn nut"
+    ],
+    "acceptance_criterion": "Pulley, washers, and nuts are installed; wheels rotate freely; reuse tray is empty.",
+    "deviation_patterns": [
+      "Hardware missing from the vehicle",
+      "Reuse tray not empty",
+      "Wheels do not rotate freely",
+      "Nuts not tightened to firm finger torque"
+    ]
+  },
+  {
+    "chapter_step_id": "7.8",
+    "action": "Perform final inspection of the rear-chassis upgrade.",
+    "check_type": "verification",
+    "components_required": [
+      "base",
+      "front chassis",
+      "front pin",
+      "short rear chassis",
+      "fr-rear pin",
+      "rr-rear pin",
+      "front bracket",
+      "bracket screw",
+      "front wheels",
+      "rear wheels"
+    ],
+    "acceptance_criterion": "The vehicle matches state 22 with the chassis positions exchanged, short braces installed, no long-configuration hardware remaining, and the front end undisturbed and tight.",
+    "deviation_patterns": [
+      "Chassis positions not exchanged correctly.",
+      "Long-configuration hardware still present.",
+      "Front end disturbed or loose.",
+      "Incorrect recording of job details or checkpoint results."
+    ]
+  },
+  {
+    "chapter_step_id": "8.1",
+    "action": "Follow the sanctioned removal step and rework sequence.",
+    "check_type": "verification",
+    "components_required": [],
+    "acceptance_criterion": "Rework is performed by removing, verifying, and reinstalling correctly without adjustment in place, forcing, or bending.",
+    "deviation_patterns": [
+      "Skipping the removal step.",
+      "Adjusting, forcing, or bending components in place.",
+      "Failing to undo concealed defects in reverse build order."
+    ]
+  },
+  {
+    "chapter_step_id": "8.2",
+    "action": "Understand documented error modes and corrective actions.",
+    "check_type": "verification",
+    "components_required": [],
+    "acceptance_criterion": "Operator must be able to identify error modes and apply the prescribed corrective actions accurately.",
+    "deviation_patterns": [
+      "Failure to remove affected wheel assembly when washer is omitted.",
+      "Failure to repeat Chapter 6 audit after installing omitted wheel.",
+      "Incorrect handling of wrong or reversed pin, such as not quarantining it.",
+      "Failure to quarantine acorn nut or repeat Chapter 4 hold point after replacing it with bracket screw.",
+      "Skipping rear pulley installation or Chapter 5 rebuild steps.",
+      "Incorrect handling of wrong braces, such as not stripping rear end per Chapter 7 steps.",
+      "Failure to establish true build state or skipping checkpoints when correcting omitted steps discovered late."
+    ]
+  },
+  {
+    "chapter_step_id": "8.3",
+    "action": "Understand the basis for the verification regime.",
+    "check_type": "verification",
+    "components_required": [],
+    "acceptance_criterion": "Operator must acknowledge that the verification regime is based on documented failures and includes mandatory checkpoints, hold points, and sign-offs.",
+    "deviation_patterns": [
+      "Failure to understand the importance of the verification regime.",
+      "Ignoring mandatory checkpoints, hold points, or sign-offs."
+    ]
+  }
+]
