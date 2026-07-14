@@ -140,7 +140,7 @@ def main():
             print(f"   ERROR: {e}")
         time.sleep(7)  # 10 req/min rate limit
 
-    out = "checklist.json"
+    out = "results/checklist.json"
     with open(out, "w") as f:
         json.dump(checklist, f, indent=2)
     print(f"\n[ok] wrote {out}  ({len(checklist)} rule(s))")

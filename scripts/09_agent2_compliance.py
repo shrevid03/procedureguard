@@ -5,9 +5,9 @@ from pathlib import Path
 from openai import OpenAI
 
 gpt = OpenAI(api_key=os.environ["GITHUB_TOKEN"], base_url=os.environ["GPT4O_BASE_URL"])
-CHECKLIST_PATH = Path("checklist.json")
-OBSERVATIONS_PATH = Path("mock_observations.json")
-VERDICTS_PATH = Path("verdicts.json")
+CHECKLIST_PATH = Path("results/checklist.json")
+OBSERVATIONS_PATH = Path("results/mock_observations.json")
+VERDICTS_PATH = Path("results/verdicts.json")
 ACTION_CHAPTERS = {"2", "3", "4", "5", "6", "7"}
 
 def filter_action_steps(checklist):

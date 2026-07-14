@@ -35,3 +35,14 @@ data/IndustReal/
 .claude/skills/
 .claude/settings.local.json
 skills-lock.json
+
+# Handoff prep - keep these local
+.env
+.venv/
+.agents/
+.claude/
+.codex/
+skills-lock.json
+__pycache__/
+*.pyc
+.mm_cache/
